@@ -1,8 +1,11 @@
-import express, { Application } from 'express';
-import { connectDB } from './config/db';
-import referralRoutes from './src/routes/referralRoutes';
-import cookieParser from 'cookie-parser';
-import path from 'path';
+const express = require('express');
+const { connectDB } = require('./config/db');
+const referralRoutes = require('./src/routes/referralRoutes');
+const cookieParser = require('cookie-parser');
+const path = require('path');
+
+import { Application } from "express";
+
 
 const app: Application = express();
 
