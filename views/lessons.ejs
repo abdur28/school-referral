@@ -1,0 +1,21 @@
+<%- include("partials/header") %>
+    <main class="content-center">
+        <div class="container">
+            <h1 class="">Lessons</h1>
+            <div class=""></div>
+                <% if (lessons && lessons.length>0) { %>
+                    <ul>
+                        <% lessons.forEach((lesson) => { %>
+                            <li>
+                                <h1><%= lesson %></h1>
+                            </li>
+                        <% }) %>
+                    </ul>
+                <% } else { %>
+                    <h3>No Lessons</h3>
+                <% } %>
+            </div>
+        </div>
+
+    </main>
+<%- include("partials/footer") %>

@@ -1,0 +1,47 @@
+<%- include("partials/header") %>
+    <main class="content-center">
+        <div class="container">
+            
+            <h1 class="header-title">Welcome, <%= user.fullName %>!</h1>
+            
+            <a href="/sign-out">
+                <button id="signOutButton" class="signOutbutton">Sign Out</button>
+            </a>
+            
+            <div class="menu-container">
+                <div class="content-container" style="background-color: aquamarine;">
+                    <h1>Lessons</h1>
+                    <p>view all available lessons</p>
+                    <a href="/lessons">
+                        <button class="button">Lessons</button>
+                    </a>
+                </div>
+                <div class="content-container" style="background-color: coral;">
+                    <h1>Statistics</h1>
+                    <p>View statistics</p>
+                    <a href="/statistics">
+                        <button class="button">Statistics</button>
+                    </a>
+                </div>
+                <div class="content-container" style="background-color: cornflowerblue;">
+                    <h1>Payment</h1>
+                    <p>Pay for lessons</p>
+                    <a href="/payment">
+                        <button class="button">Payment</button>
+                    </a>
+                </div>
+                <div class="content-container" style="background-color: darkcyan;">
+                    <h1>Invite Others</h1>
+                    <p>Invite others to join</p>
+                    <div class="link-box" id="link-box" style="display: none;">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sed a</span>
+                    </div>
+                    
+                    <button class="button" id="generate-link">Generate Link</button>
+                    <input type="hidden" id="referrerId" name="referrerId" value="test">
+                </div>
+            </div>
+        </div>
+
+    </main>
+<%- include("partials/footer") %>

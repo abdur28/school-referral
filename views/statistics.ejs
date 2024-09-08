@@ -1,0 +1,35 @@
+<%- include("partials/header") %>
+    <main class="content-center">
+        <div class="container">
+            <h1 class="">Statistics</h1>
+            <h1>Referred Users</h1>
+            <div class="">
+                <% if (referreredUsers && referreredUsers.length>0) { %>
+                    <% referreredUsers.forEach((user) => { %>
+                        <div class="content-container" style="background-color: coral;">
+                            <h1><%= user.fullName %></h1>
+                            <h3><%= user.email %></h3>
+                        </div>
+                    <% }) %>
+                <% } else { %>
+                    <h3>No Referrers</h3>
+                <% } %>
+            </div>
+            <h1>Payments</h1>
+            <div class=""></div>
+                <% if (payments && payments.length>0) { %>
+                    <ul>
+                        <% payments.forEach((payment) => { %>
+                            <li>
+                                <h1>$<%= payment.amount %></h1>
+                            </li>
+                        <% }) %>
+                    </ul>
+                <% } else { %>
+                    <h3>No Payments</h3>
+                <% } %>
+            </div>
+        </div>
+
+    </main>
+<%- include("partials/footer") %>

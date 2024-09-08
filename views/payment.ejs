@@ -1,0 +1,16 @@
+
+<%- include("partials/header") %>
+    <main class="content-center">       
+        <div class="form-box">
+        <form class="form" method="POST" action="/payment" id="paymentForm" > 
+            <span class="title">Payment</span>
+            <div class="form-container">
+                <input type="text" required class="input" id="fullName" name="fullName" placeholder="Full Name" value="<%= user.fullName %>">
+                <input type="email" required class="input" id="email" name="email" placeholder="Email" value="<%= user.email %>">
+                <input type="text" required class="input" id="address" name="address" placeholder="Address">
+            </div>
+            <button>Proceed to Payment</button>
+        </form>
+        </div>
+    </main>
+<%- include("partials/footer") %>

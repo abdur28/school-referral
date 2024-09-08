@@ -1,0 +1,24 @@
+<%- include("partials/header") %>
+    <main class="content-center">       
+        <div class="form-box">
+        <form class="form" method="POST" action="/register" id="registerForm" > 
+            <span class="title">Sign up</span>
+            <span class="subtitle">Create a free account with your email.</span>
+            <div class="form-container">
+                <input type="text" class="input" id="fullName" name="fullName" required placeholder="Full Name">
+                <input type="text" class="input" id="phoneNumber" name="phoneNumber" required placeholder="Phone Number">
+                <input type="email" class="input" id="email" name="email" required placeholder="Email">
+                <input type="password" class="input" id="password" name="password" required placeholder="Password">
+                <input type="password" class="input" id="confirmPassword" name="confirmPassword" required placeholder="Confirm Password">
+                <% if (referrerId) { %>
+                    <input type="hidden" id="referrerId" name="referrerId" value="<%= referrerId %>">
+                <% } %>
+            </div>
+            <button type="submit">Sign up</button>
+        </form>
+        <div class="form-section">
+        <p>Have an account? <a href="/signIn">Log in</a> </p>
+        </div>
+        </div>
+    </main>
+<%- include("partials/footer") %>
