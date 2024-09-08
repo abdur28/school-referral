@@ -1,5 +1,5 @@
 const express = require('express');
-const connectDB  = require('./config/db');
+const db  = require('./config/db');
 const referralRoutes = require('./src/routes/referralRoutes');
 const cookieParser = require('cookie-parser');
 const path = require('path');
@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 
 // Database connection
-connectDB();
+db();
 
 // Body parsers
 app.use(express.json());
