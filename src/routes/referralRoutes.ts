@@ -70,5 +70,5 @@ router.get('/success', paymentController.getReceipt);
 // GET /failed - страница неудачной оплаты
 router.get('/failed', paymentController.showFailedPayment);
 
-export default router;
+module.exports = router
 

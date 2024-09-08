@@ -4,10 +4,7 @@ const referralRoutes = require('./src/routes/referralRoutes');
 const cookieParser = require('cookie-parser');
 const path = require('path');
 
-import { Application } from "express";
-
-
-const app: Application = express();
+const app = express();
 
 // Database connection
 connectDB();
@@ -30,3 +27,5 @@ app.use('/', referralRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+
