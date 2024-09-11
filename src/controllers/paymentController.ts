@@ -1,4 +1,3 @@
-import { promises } from 'dns';
 import { Request, Response } from 'express';
 import User from '../models/User';
 import Payment from '../models/Payment';
